@@ -14,7 +14,6 @@ import javafx.stage.Stage;
 import sample.model.User;
 
 import java.io.IOException;
-import java.util.function.IntFunction;
 
 public class SignUpCon {
 
@@ -49,7 +48,7 @@ public class SignUpCon {
             Parent root;
 
             stage = (Stage) loginLink.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../view/Login.fxml"));
+            root = FXMLLoader.load(getClass().getResource("../view/GamePages/Login.fxml"));
 
             Scene scene = new Scene(root);
             stage.setScene(scene);
