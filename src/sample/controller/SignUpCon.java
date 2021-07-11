@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import sample.model.User;
 
 import java.io.IOException;
+import java.net.URL;
 
 public class SignUpCon {
 
@@ -40,7 +41,7 @@ public class SignUpCon {
         if (event.getSource() == signUpBtn) {
             User user = makeNewUser();
             if (user != null) {
-
+                Stage stage;
             }
             // new stage that is user panel
         } else if (event.getSource() == loginLink) {
@@ -48,8 +49,9 @@ public class SignUpCon {
             Parent root;
 
             stage = (Stage) loginLink.getScene().getWindow();
-            root = FXMLLoader.load(getClass().getResource("../view/GamePages/Login.fxml"));
-
+//            System.out.println(getClass().getResource(".."));
+            root = FXMLLoader.load(new URL("file:/D:\\Classes\\Ap_main_class\\FinalProject\\src\\sample\\view\\GamePages\\Login.fxml"));
+//            root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
             Scene scene = new Scene(root);
             stage.setScene(scene);
             stage.show();
