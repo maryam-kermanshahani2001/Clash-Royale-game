@@ -11,7 +11,8 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import sample.model.User;
+import sample.model.playersPack.Player;
+import sample.model.gameLogic.GameState;
 
 import java.io.IOException;
 import java.net.URL;
@@ -36,14 +37,20 @@ public class SignUpCon {
     @FXML
     private Hyperlink loginLink;
 
+    GameState gameState = GameState.getInstance();
+
     @FXML
     void actionHandler(ActionEvent event) throws IOException {
         if (event.getSource() == signUpBtn) {
-            User user = makeNewUser();
-            if (user != null) {
-                Stage stage;
+            Player player = makeNewUser();
+
+            if (!isExist(player)) {
+                addUser(player);
+                System.out.println(player.getUsername() + " " + player.getPassword()); //for test
+                // new stage that is player panel
+            } else {
+                System.out.println("This username has already exist");
             }
-            // new stage that is user panel
         } else if (event.getSource() == loginLink) {
             Stage stage;
             Parent root;
@@ -66,9 +73,23 @@ public class SignUpCon {
 
     }
 
-    public User makeNewUser() {
-        User user = new User(userField.getText(), passField.getText());
-        return user;
+    public Player makeNewUser() {
+        Player player = new Player(userField.getText(), passField.getText());
+        return player;
     }
 
+    public boolean isExist(Player newPlayer) {
+        for (Player u : gameState.getUsers()) {
+            if (u.getUsername().equals(newPlayer.getUsername())) {
+
+                return true;
+            }
+        }
+        return false;
+    }
+
+
+    public void addUser(Player player) {
+        gameState.getUsers().add(player);
+    }
 }
