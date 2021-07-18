@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class Archer extends Troop {
     public Archer() {
-        super(125, 75, 1.5, Speed.MEDIUM, Target.GROUND, 1, false, 4, 5);
+        super(125, 75, 1.5, Speed.MEDIUM, Target.GROUND, 1, false, 4, 5, "Archer");
 
     }
 

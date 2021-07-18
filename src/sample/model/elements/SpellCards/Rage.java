@@ -4,7 +4,7 @@ public class Rage extends Spell{
     private double duration;
 
     public Rage() {
-        super(3, 5);
+        super(3, 5, "Rage");
         duration = 6;
     }
     public void setLevelInfo(int level) {

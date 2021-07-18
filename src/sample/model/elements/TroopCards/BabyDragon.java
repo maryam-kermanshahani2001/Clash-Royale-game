@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class BabyDragon extends Troop {
     public BabyDragon() {
-        super(800, 100, 1.8, Speed.FAST, Target.AIR_AND_GROUND, 3, true, 1, 4);
+        super(800, 100, 1.8, Speed.FAST, Target.AIR_AND_GROUND, 3, true, 1, 4, "Wizard");
 
     }
 

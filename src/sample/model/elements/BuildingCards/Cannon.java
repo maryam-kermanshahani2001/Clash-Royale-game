@@ -6,7 +6,7 @@ import sample.model.elementsss.BuildingType;
 
 public class Cannon extends Building {
     public Cannon() {
-        super(380, 60, .8, Target.GROUND, 5.5, 6, 30);
+        super(380, 60, .8, Target.GROUND, 5.5, 6, 30, "Cannon");
     }
 
     public void setLevelInfo(int level) {

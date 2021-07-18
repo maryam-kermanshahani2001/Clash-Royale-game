@@ -7,7 +7,7 @@ public class InfernoTower extends Building {
     private int maxDamage;
 
     public InfernoTower() {
-        super(800, 380 / 2, .4, Target.AIR_AND_GROUND, 6, 5, 40);
+        super(800, 380 / 2, .4, Target.AIR_AND_GROUND, 6, 5, 40, "InfernoTower");
     }
 
     public void setLevelInfo(int level) {

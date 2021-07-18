@@ -5,7 +5,7 @@ public class Fireball extends Spell{
     private int areaDamage;
 
     public Fireball() {
-        super(4, 2.5);
+        super(4, 2.5, "Fireball");
         areaDamage = 325;
     }
 

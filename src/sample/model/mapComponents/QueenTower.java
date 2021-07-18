@@ -1,7 +1,7 @@
 package sample.model.mapComponents;
 
-public class PrincessTower extends Tower{
-    public PrincessTower() {
+public class QueenTower extends Tower{
+    public QueenTower() {
         super(7.5, 0.8);
     }
     public void setLevelInfo(int level) {

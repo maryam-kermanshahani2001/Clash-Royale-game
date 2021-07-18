@@ -4,7 +4,7 @@ public class Arrow extends Spell{
     private int areaDamage;
 
     public Arrow() {
-        super(3, 4);
+        super(3, 4, "Arrow");
         areaDamage = 144;
     }
 

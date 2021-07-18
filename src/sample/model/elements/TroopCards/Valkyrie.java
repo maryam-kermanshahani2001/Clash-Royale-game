@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class Valkyrie extends Troop {
     public Valkyrie() {
-        super(880, 120, 1.5, Speed.MEDIUM, Target.GROUND, 1, true, 1, 4);
+        super(880, 120, 1.5, Speed.MEDIUM, Target.GROUND, 1, true, 1, 4, "Valkyrie");
 
     }
 

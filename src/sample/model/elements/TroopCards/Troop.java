@@ -9,8 +9,8 @@ public class Troop extends ComponentCards {
     private int count;
     private boolean isAreaSplash;
 
-    public Troop(int HP, int damage, double hitSpeed, Speed speed, Target target, double range, boolean isAreaSplash, int count, int cost) {
-        super(HP, damage, hitSpeed, target, range, cost);
+    public Troop(int HP, int damage, double hitSpeed, Speed speed, Target target, double range, boolean isAreaSplash, int count, int cost, String name) {
+        super(HP, damage, hitSpeed, target, range, cost, name);
         this.speed = speed;
         this.count = count;
         this.isAreaSplash = isAreaSplash;

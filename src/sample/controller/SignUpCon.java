@@ -11,6 +11,8 @@ import javafx.scene.control.Hyperlink;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import sample.Datas;
+import sample.model.FileUtils.Saver;
 import sample.model.playersPack.Player;
 import sample.model.gameLogic.GameState;
 
@@ -37,7 +39,13 @@ public class SignUpCon {
     @FXML
     private Hyperlink loginLink;
 
+    @FXML
+    private Label warningLabel;
+
+    private Saver saver = new Saver("Files");
+
     GameState gameState = GameState.getInstance();
+    private Datas datas = Datas.getInstance();
 
     @FXML
     void actionHandler(ActionEvent event) throws IOException {
@@ -46,22 +54,20 @@ public class SignUpCon {
 
             if (!isExist(player)) {
                 addUser(player);
+                gameState.setCurrPlayer(player);
+                URL url = new URL("file:/D:\\Classes\\Ap_main_class\\FinalProject\\src\\sample\\view\\GamePages\\Menu.fxml");
+                updatePage(url);
                 System.out.println(player.getUsername() + " " + player.getPassword()); //for test
                 // new stage that is player panel
             } else {
-                System.out.println("This username has already exist");
+                warningLabel.setText("This username has already exist");
+//                System.out.println("This username has already exist");
             }
-        } else if (event.getSource() == loginLink) {
-            Stage stage;
-            Parent root;
 
-            stage = (Stage) loginLink.getScene().getWindow();
-//            System.out.println(getClass().getResource(".."));
-            root = FXMLLoader.load(new URL("file:/D:\\Classes\\Ap_main_class\\FinalProject\\src\\sample\\view\\GamePages\\Login.fxml"));
-//            root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
-            Scene scene = new Scene(root);
-            stage.setScene(scene);
-            stage.show();
+        } else if (event.getSource() == loginLink) {
+
+            URL url = new URL("file:/D:\\Classes\\Ap_main_class\\FinalProject\\src\\sample\\view\\GamePages\\Login.fxml");
+            updatePage(url);
 
         } else if (event.getSource() == rememberBox) {
             // ?
@@ -78,8 +84,9 @@ public class SignUpCon {
         return player;
     }
 
+
     public boolean isExist(Player newPlayer) {
-        for (Player u : gameState.getUsers()) {
+        for (Player u : datas.getUsers()) {
             if (u.getUsername().equals(newPlayer.getUsername())) {
 
                 return true;
@@ -90,6 +97,28 @@ public class SignUpCon {
 
 
     public void addUser(Player player) {
-        gameState.getUsers().add(player);
+        datas.getUsers().add(player);
+        try {
+            saver.saveUser(player);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
+
+
+    public void updatePage(URL url) throws IOException {
+
+        Stage stage;
+        Parent root;
+
+        stage = (Stage) loginLink.getScene().getWindow();
+//            System.out.println(getClass().getResource(".."));
+        root = FXMLLoader.load(url);
+//            root = FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+
+    }
+
 }

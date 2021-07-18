@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class MiniPekka extends Troop {
     public MiniPekka() {
-        super(300, 325, 1.8, Speed.FAST, Target.GROUND, 1, false, 1, 4);
+        super(300, 325, 1.8, Speed.FAST, Target.GROUND, 1, false, 1, 4, "MiniPekka");
     }
 
 

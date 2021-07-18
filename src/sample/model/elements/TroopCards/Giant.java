@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class Giant extends Troop {
     public Giant() {
-        super(2000, 126, 1.5, Speed.SLOW, Target.GROUND, 1, false, 1, 5);
+        super(2000, 126, 1.5, Speed.SLOW, Target.GROUND, 1, false, 1, 5, "Giant");
 
     }
 

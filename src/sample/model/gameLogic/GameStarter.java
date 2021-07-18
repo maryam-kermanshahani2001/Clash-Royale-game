@@ -9,6 +9,5 @@ public class GameStarter {
     }
 
     public void gameInit() {
-        gameState.constructUsers();
     }
 }

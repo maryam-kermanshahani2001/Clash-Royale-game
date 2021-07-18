@@ -1,6 +1,8 @@
 package sample.model.mapComponents;
 
-public class Tower {
+import sample.model.MapComponent;
+
+public class Tower extends MapComponent {
     private double range;
     private int damage;
     private int HP;

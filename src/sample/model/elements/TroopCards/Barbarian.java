@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class Barbarian extends Troop {
     public Barbarian() {
-        super(300, 75, 1.5, Speed.MEDIUM, Target.GROUND, 1, false, 4, 5);
+        super(300, 75, 1.5, Speed.MEDIUM, Target.GROUND, 1, false, 4, 5, "Barbarian");
     }
 
     public void setLevelInfo(int level) {

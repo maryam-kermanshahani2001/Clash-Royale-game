@@ -7,8 +7,8 @@ public class Spell extends Card {
     private double radius; // radius
     private int level;
 
-    public Spell(int cost, double radius) {
-        super(cost);
+    public Spell(int cost, double radius, String name) {
+        super(cost, name);
         this.radius = radius;
         this.level = 1;
     }

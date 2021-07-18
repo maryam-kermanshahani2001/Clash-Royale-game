@@ -11,8 +11,8 @@ public class Building extends ComponentCards {
 
     private int lifeTime;
 
-    public Building(int HP, int damage, double hitSpeed, Target target, double range, int cost, int lifeTime) {
-        super(HP, damage, hitSpeed, target, range, cost);
+    public Building(int HP, int damage, double hitSpeed, Target target, double range, int cost, int lifeTime, String name) {
+        super(HP, damage, hitSpeed, target, range, cost, name);
         this.lifeTime = lifeTime;
 //        this.buildingType = buildingType;
     }

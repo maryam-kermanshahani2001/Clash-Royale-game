@@ -12,8 +12,8 @@ public class ComponentCards extends Card{
     private int level;
 
 
-    public ComponentCards(int HP, int damage, double hitSpeed, Target target, double range, int cost) {
-        super(cost);
+    public ComponentCards(int HP, int damage, double hitSpeed, Target target, double range, int cost, String name) {
+        super(cost, name);
         this.level = 1;
         this.HP = HP;
         this.damage = damage;

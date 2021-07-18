@@ -5,7 +5,7 @@ import sample.model.Target;
 
 public class Wizard extends Troop {
     public Wizard() {
-        super(340, 130, 1.7, Speed.MEDIUM, Target.AIR_AND_GROUND, 5, true, 1, 5);
+        super(340, 130, 1.7, Speed.MEDIUM, Target.AIR_AND_GROUND, 5, true, 1, 5, "Wizard");
     }
 
     public void setLevelInfo(int level) {

@@ -14,7 +14,7 @@ public class Main extends Application {
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("view/GamePages/Signup.fxml"));
         primaryStage.setTitle("Hello World");
-        primaryStage.setScene(new Scene(root, 429, 400));
+        primaryStage.setScene(new Scene(root, 475, 481));
         primaryStage.show();
     }
 
