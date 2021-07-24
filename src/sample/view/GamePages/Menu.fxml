@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="908.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.MenuCon">
+   <children>
+      <ImageView fitHeight="528.0" fitWidth="908.0">
+         <image>
+            <Image url="@../Pics/menu.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="historyBtn" layoutX="356.0" layoutY="310.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="66.0" prefWidth="195.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="History">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="battleDeckBtn" layoutX="356.0" layoutY="131.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="66.0" prefWidth="195.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="Battle Deck">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="profileBtn" layoutX="356.0" layoutY="220.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="66.0" prefWidth="195.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="Profile">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="trainingBtn" layoutX="356.0" layoutY="44.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="66.0" prefWidth="195.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="Training">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="quitBtn" layoutX="356.0" layoutY="410.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="66.0" prefWidth="195.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="Quit">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+
+
+<?import sample.view.MapView?>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="721.0"
+            prefWidth="638.0" style="-fx-background-color: #98FB98;" xmlns="http://javafx.com/javafx/11.0.1"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.GameCon">
+    <top>
+        <BorderPane prefHeight="70.0" prefWidth="638.0" BorderPane.alignment="CENTER">
+            <left>
+                <Label text="Label" BorderPane.alignment="CENTER"/>
+            </left>
+            <center>
+                <Label text="Label" BorderPane.alignment="CENTER"/>
+            </center>
+            <right>
+                <Label text="Label" BorderPane.alignment="CENTER"/>
+            </right>
+        </BorderPane>
+    </top>
+
+    <center>
+        <MapView fx:id="gameView" BorderPane.alignment="CENTER"/>
+    </center>
+</BorderPane>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="750.0" prefWidth="900.0" style="-fx-background-color: gray;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.BattleDeckCon">
+   <children>
+      <Button fx:id="mainMenuBtn" layoutX="719.0" layoutY="667.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="68.0" prefWidth="166.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="Main Menu">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="31.0" layoutY="672.0" prefHeight="58.0" prefWidth="176.0" style="-fx-background-color: #FFA;" text="Your Cards  = ">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Label fx:id="cartNumLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="207.0" layoutY="672.0" prefHeight="58.0" prefWidth="176.0" style="-fx-background-color: #FFA;">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <HBox fx:id="hbox" layoutX="18.0" layoutY="367.0" prefHeight="138.0" prefWidth="753.0" />
+      <HBox fx:id="hbox2" layoutX="18.0" layoutY="505.0" prefHeight="138.0" prefWidth="753.0" />
+      <HBox fx:id="allCardsBox1" layoutX="18.0" layoutY="56.0" prefHeight="138.0" prefWidth="753.0">
+         <children>
+            <ImageView fx:id="Rage" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Spell/rage.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Cannon" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Building/Cannon.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="BabyDragon" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/dragon.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="InfernoTower" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Building/inferno.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Fireball" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Spell/fireball.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Arrow" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Spell/arrow.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox fx:id="allCardsBox2" layoutX="18.0" layoutY="194.0" prefHeight="138.0" prefWidth="753.0">
+         <children>
+            <ImageView fx:id="Wizard" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/wizard.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Valkyrie" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/valkyrie.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="MiniPekka" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/mini.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Giant" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/Giant.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Barbarian" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/Barbarian.PNG" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="Archer" fitHeight="138.0" fitWidth="115.0" onMouseClicked="#handleMouseClick">
+               <image>
+                  <Image url="@../Pics/Troop/archer.PNG" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <Button fx:id="rstBtn" layoutX="491.0" layoutY="667.0" mnemonicParsing="false" onAction="#actionHandler" prefHeight="68.0" prefWidth="166.0" style="-fx-background-color: #FFA; -fx-background-radius: 15;" text="Reset cards">
+         <font>
+            <Font name="Bookman Old Style Bold" size="20.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

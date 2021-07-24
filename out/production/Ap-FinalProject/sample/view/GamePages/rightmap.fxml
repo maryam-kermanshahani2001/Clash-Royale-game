@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import sample.view.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="780.0" prefWidth="1400.0" style="-fx-background-color: #98fb98;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller.GameCon">
+    <top>
+        <BorderPane prefHeight="50.0" prefWidth="1000.0" BorderPane.alignment="CENTER">
+            <left>
+                <Label text="Label" BorderPane.alignment="CENTER" />
+            </left>
+            <center>
+                <Label text="Label" BorderPane.alignment="CENTER" />
+            </center>
+            <right>
+                <Label text="Label" BorderPane.alignment="CENTER" />
+            </right>
+        </BorderPane>
+    </top>
+    <center>
+        <StackPane prefHeight="630.0" prefWidth="1155.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="630.0" fitWidth="1155.0">
+                    <image>
+                        <Image url="@../Pics/map3.PNG" />
+                    </image>
+                </ImageView>
+                <AnchorPane prefHeight="630.0" prefWidth="1155.0">
+                   <children>
+<!--                      <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="110.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">-->
+<!--                         <image>-->
+<!--                            <Image url="@../Pics/Satyr_01_Attacking_000.png" />-->
+<!--                         </image>-->
+<!--                      </ImageView>-->
+                   <MapView fx:id="gameView" rowCount="18" columnCount="33" />
+               </children></AnchorPane>
+        </children>
+    </StackPane>
+</center>
+<left>
+<BorderPane prefHeight="200.0" prefWidth="150.0" BorderPane.alignment="CENTER" />
+</left>
+        </BorderPane>
